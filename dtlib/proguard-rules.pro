@@ -23,3 +23,9 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class reyst.gsihome.dtlib.**
+-keepnames public class reyst.gsihome.dtlib.**
+-keepclassmembers class reyst.gsihome.dtlib.** {
+   public *;
+}
