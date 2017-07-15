@@ -1,4 +1,7 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.reyst'
 
 android {
     compileSdkVersion 26
@@ -23,6 +26,9 @@ android {
 
 dependencies {
     testCompile 'junit:junit:4.12'
+}
 
-    compile 'com.github.Reyst:Jitpack-attempt:0.1'
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
 }
